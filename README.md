@@ -17,45 +17,45 @@ To solve the problem efficiently, this implementation is based on the **Radix so
 
 The program is limited to the following instructions:
 
-- **pa (push A)**  
+- `pa` (push A)
   Take the first element at the top of stack B and put it at the top of stack A.  
   Does nothing if stack B is empty.
 
-- **pb (push B)**  
+- `pb` (push B)* 
   Take the first element at the top of stack A and put it at the top of stack B.  
   Does nothing if stack A is empty.
 
-- **sa (swap A)**  
+- `sa` (swap A)
   Swap the first two elements at the top of stack A.  
   Does nothing if there is one or no elements.
 
-- **sb (swap B)**  
+- `sb` (swap B)
   Swap the first two elements at the top of stack B.  
   Does nothing if there is one or no elements.
 
-- **ss**  
+- `ss**  
   Perform `sa` and `sb` simultaneously.
 
-- **ra (rotate A)**  
+- `ra` (rotate A)
   Shift all elements of stack A up by one.  
   The first element becomes the last one.
 
-- **rb (rotate B)**  
+- `rb` (rotate B)
   Shift all elements of stack B up by one.  
   The first element becomes the last one.
 
-- **rr**  
+- `rr` 
   Perform `ra` and `rb` simultaneously.
 
-- **rra (reverse rotate A)**  
+- `rra` (reverse rotate A)
   Shift all elements of stack A down by one.  
   The last element becomes the first one.
 
-- **rrb (reverse rotate B)**  
+- `rrb` (reverse rotate B)
   Shift all elements of stack B down by one.  
   The last element becomes the first one.
 
-- **rrr**  
+- `rrr`
   Perform `rra` and `rrb` simultaneously.
 
 ---
