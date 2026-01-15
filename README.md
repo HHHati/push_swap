@@ -33,7 +33,7 @@ The program is limited to the following instructions:
   Swap the first two elements at the top of stack B.  
   Does nothing if there is one or no elements.
 
-- `ss**  
+- `ss`
   Perform `sa` and `sb` simultaneously.
 
 - `ra` (rotate A)
