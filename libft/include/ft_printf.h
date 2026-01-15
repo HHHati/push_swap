@@ -6,7 +6,7 @@
 /*   By: bade-lee <bade-lee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 11:24:34 by bade-lee          #+#    #+#             */
-/*   Updated: 2022/03/13 13:44:47 by bade-lee         ###   ########.fr       */
+/*   Updated: 2026/01/15 16:01:52 by bade-lee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,6 @@ int		param_i(int *counter, va_list params);
 int		param_u(int *counter, va_list params);
 int		param_xlow(int *counter, va_list params);
 int		param_xup(int *counter, va_list params);
-int		param_prc(int *counter);
+int		param_prc(int *counter, va_list params);
 
 #endif

@@ -6,17 +6,17 @@
 /*   By: bade-lee <bade-lee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 11:43:59 by bade-lee          #+#    #+#             */
-/*   Updated: 2021/12/01 14:36:00 by bade-lee         ###   ########.fr       */
+/*   Updated: 2026/01/15 16:02:49 by bade-lee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_apply_param(int param, va_list params, size_t *counter)
+void	ft_apply_param(int param, va_list params, int *counter)
 {
-	static int	(*function[9])() = {&param_c, &param_s,
-		&param_p, &param_d, &param_i, &param_u,
-		&param_xlow, &param_xup, &param_prc};
+	static int	(*function[9])(int *, va_list) =
+		{&param_c, &param_s, &param_p, &param_d, &param_i,
+		&param_u, &param_xlow, &param_xup, &param_prc};
 
 	function[param](counter, params);
 }
@@ -25,7 +25,7 @@ int	ft_printf(const char *param, ...)
 {
 	static char	*options = "cspdiuxX%";
 	size_t		i;
-	size_t		counter;
+	int		counter;
 	va_list		list;
 
 	i = 0;
